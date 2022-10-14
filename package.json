@@ -1,67 +1,43 @@
 {
-  "name": "site_vitrine",
+  "name": "template-web-build",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^13.0.0",
-    "@testing-library/user-event": "^13.2.1",
-    "@types/jest": "^27.0.1",
-    "@types/node": "^16.7.13",
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.1",
-    "typescript": "^4.4.2",
-    "web-vitals": "^2.1.0"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix",
-    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+    "dev": "echo '🚀 Launching dev server...' && next dev",
+    "build": "echo '🏗 Building...' && next build",
+    "start": "echo '🚀 Launching production server...' && next start",
+    "lint": "echo '🧹 Linting...' && next lint"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "@headlessui/react": "^1.6.6",
+    "@heroicons/react": "^1.0.5",
+    "@prisma/client": "^4.4.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "autoprefixer": "^10.4.7",
+    "chart.js": "^3.9.1",
+    "next": "12.2.2",
+    "postcss": "^8.4.14",
+    "prisma": "^4.4.0",
+    "react": "18.2.0",
+    "react-chartjs-2": "^4.3.1",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.4.0",
+    "react-loading": "^2.0.3",
+    "react-responsive": "^9.0.0-beta.6",
+    "socket.io": "^4.5.2",
+    "socket.io-client": "^4.5.2",
+    "tailwindcss": "^3.0.13"
   },
   "devDependencies": {
-    "@types/enzyme": "^2.7.2",
-    "@types/jest": "^18.1.1",
-    "@types/node": "^7.0.5",
-    "@types/react": "^15.6.6",
-    "@types/react-dom": "^0.14.22",
-    "@types/react-redux": "^4.4.36",
-    "@typescript-eslint/eslint-plugin": "^5.30.5",
-    "@typescript-eslint/parser": "^5.30.5",
-    "enzyme": "^2.7.1",
-    "eslint": "^8.19.0",
+    "@types/node": "18.0.6",
+    "@types/react": "18.0.15",
+    "@types/react-dom": "18.0.6",
+    "@types/ws": "^8.5.3",
+    "@typescript-eslint/eslint-plugin": "^5.30.7",
+    "eslint": "8.20.0",
+    "eslint-config-next": "12.2.2",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.30.1",
     "prettier": "^2.7.1",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-redux": "^5.0.2",
-    "redux": "^3.6.0"
+    "typescript": "4.7.4"
   }
 }
