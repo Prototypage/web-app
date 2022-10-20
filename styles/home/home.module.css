@@ -9,12 +9,20 @@
 }
 
 .main {
+  min-height: 100vh;
   padding: 2rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: rgb(150, 230, 213);
+  background: linear-gradient(
+    90deg,
+    rgba(150, 230, 213, 1) 0%,
+    rgba(78, 198, 236, 1) 41%,
+    rgba(150, 230, 213, 1) 100%
+  );
 }
 
 .limitedtext {

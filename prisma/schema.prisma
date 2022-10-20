@@ -34,3 +34,10 @@ model water_level {
   created_at  DateTime @default(now())
   updated_at  DateTime @updatedAt @default(now())
 }
+
+model pir_sensor {
+  id          Int    @default(autoincrement()) @id
+  status      Int
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt @default(now())
+}

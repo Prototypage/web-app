@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Bar } from 'react-chartjs-2'
 import styles from '../../../styles/home/home.module.css'
+import { BsArrowLeft } from 'react-icons/bs'
 
 import {
   Chart as ChartJS,
@@ -13,6 +14,8 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js'
+import Link from 'next/link'
+import { Route } from 'react-router-dom'
 
 ChartJS.register(
   CategoryScale,
@@ -25,12 +28,12 @@ ChartJS.register(
   Legend
 )
 
-let inside = false
 let text_temperature = ''
 let text_axeX = ''
+let inside = false
 
 export function Temperatures(): JSX.Element {
-  const [data_temperature, setData_temperature] = useState({})
+  const [data_temperature, setData_temperature] = useState()
 
   const fetchData_today = async () => {
     text_temperature = 'ce matin'
@@ -161,6 +164,9 @@ export function Temperatures(): JSX.Element {
       title: {
         display: true,
         text: 'Températures relevées depuis ' + text_temperature,
+        font: {
+          size: 30,
+        },
       },
     },
     elements: {
@@ -194,12 +200,32 @@ export function Temperatures(): JSX.Element {
       },
     },
   }
-  if (!inside) fetchData_today()
+  useEffect(() => {
+    window.onpageshow = function (event) {
+      if (event.persisted) {
+        window.location.reload()
+      }
+    }
+  }, [])
+
+  if (data_temperature == undefined) fetchData_today()
   if (!inside) return <div>loading...</div>
   else {
     return (
       <>
         <main className={styles.main}>
+          <div className="w-1/2">
+            <Link href={'/'} passHref={true}>
+              <button
+                className="bg-gray-500 hover:bg-gray-700 rounded-full text-white font-bold"
+                type="button"
+                title="retour"
+              >
+                <BsArrowLeft size={64} color="white" className="m-auto p-4" />
+              </button>
+            </Link>
+          </div>
+
           <div className="w-1/2 p-2">
             <Bar data={data_temperature} options={options} />
           </div>

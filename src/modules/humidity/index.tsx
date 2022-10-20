@@ -13,6 +13,9 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js'
+// import { Link } from 'react-router-dom'
+import { BsArrowLeft } from 'react-icons/bs'
+import Link from 'next/link'
 
 ChartJS.register(
   CategoryScale,
@@ -154,6 +157,9 @@ export function Humidity(): JSX.Element {
       title: {
         display: true,
         text: 'Humidité relevée depuis ' + text_humidity,
+        font: {
+          size: 30,
+        },
       },
     },
     elements: {
@@ -189,6 +195,17 @@ export function Humidity(): JSX.Element {
     return (
       <>
         <main className={styles.main}>
+          <div className="w-1/2">
+            <Link href={'/'} passHref={true}>
+              <button
+                className="bg-gray-500 hover:bg-gray-700 rounded-full text-white font-bold"
+                type="button"
+                title="retour"
+              >
+                <BsArrowLeft size={64} color="white" className="m-auto p-4" />
+              </button>
+            </Link>
+          </div>
           <div className="w-1/2 p-2">
             <Bar data={data_humidity} options={options} />
           </div>
