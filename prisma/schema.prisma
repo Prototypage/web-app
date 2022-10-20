@@ -1,0 +1,43 @@
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://postgres:@10.117.128.92:5432/db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model distance {
+  id          Int    @default(autoincrement()) @id
+  mesure      Float
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt @default(now())
+}
+
+model temperature {
+  id          Int    @default(autoincrement()) @id
+  temperature Float
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt @default(now())
+}
+
+model humidity {
+  id          Int    @default(autoincrement()) @id
+  humidity    Float
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt @default(now())
+}
+
+model water_level {
+  id          Int    @default(autoincrement()) @id
+  level       Int
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt @default(now())
+}
+
+model pir_sensor {
+  id          Int    @default(autoincrement()) @id
+  status      Int
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt @default(now())
+}

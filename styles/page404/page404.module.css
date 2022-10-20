@@ -1,0 +1,19 @@
+.background {
+  background-image: url('/bg-anim.png');
+  height: 500px;
+}
+
+.texte404 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 200px;
+  border: 5px solid white;
+  border-radius: 10px;
+}
+
+.textep {
+  font-size: xx-large;
+  font-weight: bold;
+}

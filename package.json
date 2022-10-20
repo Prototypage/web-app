@@ -1,0 +1,41 @@
+{
+  "name": "template-web-build",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "echo '🚀 Launching dev server...' && next dev",
+    "build": "echo '🏗 Building...' && next build",
+    "start": "echo '🚀 Launching production server...' && next start",
+    "lint": "echo '🧹 Linting...' && next lint"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.4.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "autoprefixer": "^10.4.7",
+    "chart.js": "^3.9.1",
+    "next": "12.2.2",
+    "postcss": "^8.4.18",
+    "prisma": "^4.4.0",
+    "react": "18.2.0",
+    "react-chartjs-2": "^4.3.1",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.4.0",
+    "react-loading": "^2.0.3",
+    "react-responsive": "^9.0.0-beta.6",
+    "react-router-dom": "^6.4.2",
+    "react-video-stream": "^1.0.1",
+    "tailwindcss": "^3.0.13"
+  },
+  "devDependencies": {
+    "@types/node": "18.0.6",
+    "@types/react": "18.0.15",
+    "@types/react-dom": "18.0.6",
+    "@types/ws": "^8.5.3",
+    "@typescript-eslint/eslint-plugin": "^5.30.7",
+    "eslint": "8.20.0",
+    "eslint-config-next": "12.2.2",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "^2.7.1",
+    "typescript": "4.7.4"
+  }
+}
